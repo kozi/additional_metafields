@@ -14,7 +14,7 @@ $GLOBALS['TL_LANG']['additional_metafields']['quote']  = 'Zitat';
 $GLOBALS['TL_LANG']['additional_metafields']['isbn']   = 'ISBN';
 ```
 
-### Beispiel für ein Template mit erweiterten Metadaten
+### **gallery**: Template mit erweiterten Metadaten 
 
 ```html
 <ul>
@@ -48,5 +48,16 @@ $GLOBALS['TL_LANG']['additional_metafields']['isbn']   = 'ISBN';
   <?php endforeach; ?>
 </ul>
 ```
+
+### **image**: Template mit erweiterten Metadaten 
+```html
+<div ...>
+  <figure class="image_container" ...>
+    ...
+  </figure>
+  <?php var_dump($this->metaData); ?>
+</div>
+```
+
 
 
