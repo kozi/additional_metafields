@@ -5,6 +5,7 @@ Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die
 die Anzeige der weiteren Felder einschränken. Die zusätzlichen Metadaten können dann in den Elementen gallery und image ausgegeben und verwendet werden.
 
 Beispiel für langconfig.php
+------------------------------
 ```php
 <?php
 // Put your custom configuration here
@@ -15,6 +16,7 @@ $GLOBALS['TL_LANG']['additional_metafields']['isbn']   = 'ISBN';
 ```
 
 Beispiel für ein Template mit erweiterten Metadaten
+------------------------------------------------------
 ```html
 <ul>
   <?php foreach ($this->body as $class=>$row): ?>
@@ -35,7 +37,7 @@ Beispiel für ein Template mit erweiterten Metadaten
                 <figcaption class="city"><?php var_dump($this->metaData[$col->singleSRC][city]); ?></figcaption>
                 <figcaption class="quote"><?php var_dump($this->metaData[$col->singleSRC][quote]); ?></figcaption>
                 <figcaption class="isbn"><?php var_dump($this->metaData[$col->singleSRC]['isbn']); ?></figcaption>
-	      </div>
+              </div>
 	      
             <?php if ($col->caption): ?>
               <figcaption class="caption" ...><?php echo $col->caption; ?></figcaption>
