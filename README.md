@@ -1,8 +1,7 @@
 Contao3: additional_metafields
 ====================================
 
-Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder werden dazu einfach in der Datei langconfig.php definiert. In den Einstellungen kann man dann noch über eine Kommagetrennte Liste von Dateitypen
-die Anzeige der weiteren Felder einschränken. Die zusätzlichen Metadaten können dann in den Elementen gallery und image ausgegeben und verwendet werden.
+Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder werden dazu einfach in der Datei **langconfig.php** definiert. In den Einstellungen kann man dann noch über eine Kommagetrennte Liste von Dateitypen die Anzeige der weiteren Felder einschränken. Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **image** ausgegeben und verwendet werden.
 
 ### Beispiel für langconfig.php
 
