@@ -32,7 +32,7 @@ $GLOBALS['TL_LANG']['additional_metafields']['isbn']   = 'ISBN';
               <figcaption class="singleSRC"><?php echo 'singleSRC: '.$col->singleSRC; ?></figcaption>
               
               <div class="metaData">
-                <figcaption class="author"><?php  echo $this->metaData[$col->singleSRC][author]; ?></figcaption>
+                <figcaption class="author"><?php echo $this->metaData[$col->singleSRC][author]; ?></figcaption>
                 <figcaption class="city"><?php echo $this->metaData[$col->singleSRC][city]; ?></figcaption>
                 <figcaption class="quote"><?php echo $this->metaData[$col->singleSRC][quote]; ?></figcaption>
                 <figcaption class="isbn"><?php echo $this->metaData[$col->singleSRC]['isbn']; ?></figcaption>
