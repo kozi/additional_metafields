@@ -1,7 +1,7 @@
 Contao3: additional_metafields
 ====================================
 
-Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder werden dazu einfach in der Datei **langconfig.php** definiert. In den Einstellungen kann man dann noch über eine Kommagetrennte Liste von Dateitypen die Anzeige der weiteren Felder einschränken. Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **image** ausgegeben und verwendet werden.
+Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder werden dazu einfach in der Datei **langconfig.php** definiert. In den Einstellungen kann man dann noch über eine kommagetrennte Liste von Dateitypen die Anzeige der weiteren Felder einschränken. Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **image** ausgegeben und verwendet werden.
 
 ### Beispiel für langconfig.php
 
@@ -32,10 +32,10 @@ $GLOBALS['TL_LANG']['additional_metafields']['isbn']   = 'ISBN';
               <figcaption class="singleSRC"><?php echo 'singleSRC: '.$col->singleSRC; ?></figcaption>
               
               <div class="metaData">
-                <figcaption class="author"><?php var_dump($this->metaData[$col->singleSRC][author]); ?></figcaption>
-                <figcaption class="city"><?php var_dump($this->metaData[$col->singleSRC][city]); ?></figcaption>
-                <figcaption class="quote"><?php var_dump($this->metaData[$col->singleSRC][quote]); ?></figcaption>
-                <figcaption class="isbn"><?php var_dump($this->metaData[$col->singleSRC]['isbn']); ?></figcaption>
+                <figcaption class="author"><?php  echo $this->metaData[$col->singleSRC][author]; ?></figcaption>
+                <figcaption class="city"><?php echo $this->metaData[$col->singleSRC][city]; ?></figcaption>
+                <figcaption class="quote"><?php echo $this->metaData[$col->singleSRC][quote]; ?></figcaption>
+                <figcaption class="isbn"><?php echo $this->metaData[$col->singleSRC]['isbn']; ?></figcaption>
               </div>
 	      
             <?php if ($col->caption): ?>
