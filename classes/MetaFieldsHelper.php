@@ -55,9 +55,9 @@ class MetaFieldsHelper extends Frontend {
 
         if ($objRow->type === 'gallery') {
             $objElement->__set('metaData', $this->getMultiMetaData($objRow->multiSRC));
-
             $strBuffer = $objElement->generate();
         }
+
         if ($objRow->type === 'image') {
             $objFile = \FilesModel::findByUuid($objRow->singleSRC);
             $objElement->__set('singleSRC', $objFile->uuid);
@@ -109,4 +109,14 @@ class MetaFieldsHelper extends Frontend {
         return $images;
     }
 
+    public static function embedData($body, $metaData) {
+        foreach ($body as $class => &$row) {
+            foreach ($row as &$col) {
+                if (array_key_exists($col->singleSRC, $metaData) && sizeof($metaData[$col->singleSRC]) > 0) {
+                    $col->metaData = $metaData[$col->singleSRC];
+                }
+            }
+        }
+        return $body;
+    }
 } 
