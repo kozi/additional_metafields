@@ -1,0 +1,34 @@
+{
+    "name":"martin-kozianka/additional_metafields",
+    "description":"Additional metafields for contao",
+    "keywords":["contao", "metafields"],
+    "type":"contao-module",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Martin Kozianka",
+            "email":"martin@kozianka.de",
+            "homepage":"http://kozianka.de",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+        "email":"martin@kozianka.de",
+        "issues":"https://github.com/kozi/additional_metafields/issues",
+        "irc":"irc://irc.freenode.org/contao.dev",
+        "source":"https://github.com/kozi/additional_metafields"
+
+    },
+    "require":{
+        "php":">=5.3",
+        "contao/core":">=3.2,<4",
+        "intervention/image": "~2"
+    },
+    "extra":{
+        "contao": {
+            "sources":{
+                "contao": "system/modules/additional_metafields"
+            }
+        }
+    }
+}
