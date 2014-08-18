@@ -14,7 +14,10 @@
  */
 
 
+
+ClassLoader::addNamespace('AdditionalMetafields');
+
 ClassLoader::addClasses(array(
-    'Contao\MetaFieldsHelper'          => 'system/modules/additional_metafields/classes/MetaFieldsHelper.php',
-    'Contao\MetaWizardPlus'            => 'system/modules/additional_metafields/widgets/MetaWizardPlus.php'
+    'AdditionalMetafields\MetaFieldsHelper'          => 'system/modules/additional_metafields/classes/MetaFieldsHelper.php',
+    'AdditionalMetafields\MetaWizardPlus'            => 'system/modules/additional_metafields/widgets/MetaWizardPlus.php'
 ));

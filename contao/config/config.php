@@ -13,8 +13,8 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['getContentElement'][]         = array('MetaFieldsHelper', 'injectMetaData');
-$GLOBALS['BE_FFL']['metaWizardPlus']                = 'MetaWizardPlus';
+$GLOBALS['TL_HOOKS']['getContentElement'][]         = array('AdditionalMetafields\MetaFieldsHelper', 'injectMetaData');
+$GLOBALS['BE_FFL']['metaWizardPlus']                = 'AdditionalMetafields\MetaWizardPlus';
 
 if (TL_MODE == 'BE') {
     $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css|screen";

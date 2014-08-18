@@ -17,7 +17,7 @@
 /**
  * Run in a custom namespace, so the class can be replaced
  */
-namespace Contao;
+namespace AdditionalMetafields;
 
 
 /**
@@ -49,7 +49,7 @@ class MetaWizardPlus extends \MetaWizard
         // Make sure there is at least an empty array
         if (!is_array($this->varValue) || empty($this->varValue))
         {
-            $this->import('BackendUser', 'User');
+            $this->import('Contao\BackendUser', 'User');
             $this->varValue = array($this->User->language=>array()); // see #4188
         }
 

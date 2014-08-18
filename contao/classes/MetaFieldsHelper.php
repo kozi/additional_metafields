@@ -17,7 +17,7 @@
 /**
  * Run in a custom namespace, so the class can be replaced
  */
-namespace Contao;
+namespace AdditionalMetafields;
 
 /**
  * Class MetaFieldsHelper
@@ -27,7 +27,7 @@ namespace Contao;
  * @author     Martin Kozianka <http://kozianka.de/>
  * @package    additional_metafields
  */
-class MetaFieldsHelper extends Frontend {
+class MetaFieldsHelper extends \Frontend {
 
     public static function getFileExtensions() {
         $exts = array();
