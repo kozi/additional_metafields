@@ -17,5 +17,5 @@ $GLOBALS['TL_HOOKS']['getContentElement'][]         = array('AdditionalMetafield
 $GLOBALS['BE_FFL']['metaWizardPlus']                = 'AdditionalMetafields\MetaWizardPlus';
 
 if (TL_MODE == 'BE') {
-    $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css|screen";
+    $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css";
 }
