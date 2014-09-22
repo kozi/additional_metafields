@@ -74,38 +74,39 @@ class MetaFieldsHelper extends \Frontend {
         $images   = array();
         $objFiles = \FilesModel::findMultipleByUuids(unserialize($multiSRC));
 
-        while ($objFiles->next()) {
-            // Continue if the files has been processed or does not exist
-            if (isset($images[$objFiles->path]) || !file_exists(TL_ROOT . '/' . $objFiles->path)) {
-                continue;
-            }
-            // Single files
-            if ($objFiles->type == 'file') {
-                $objFile = new \File($objFiles->path, true);
-                if (!$objFile->isGdImage) {
+        if($objFiles !== null) {
+            while ($objFiles->next()) {
+                // Continue if the files has been processed or does not exist
+                if (isset($images[$objFiles->path]) || !file_exists(TL_ROOT . '/' . $objFiles->path)) {
                     continue;
                 }
-                $images[$objFiles->path] = $this->getMetaData($objFiles->meta, $objPage->language);
-            }
-            else {
-                $objSubfiles = \FilesModel::findByPid($objFiles->uuid);
-                if ($objSubfiles === null) {
-                    continue;
-                }
-                while ($objSubfiles->next()) {
-                    // Skip subfolders
-                    if ($objSubfiles->type == 'folder') {
-                        continue;
-                    }
-                    $objFile = new \File($objSubfiles->path, true);
-
+                // Single files
+                if ($objFiles->type == 'file') {
+                    $objFile = new \File($objFiles->path, true);
                     if (!$objFile->isGdImage) {
                         continue;
                     }
-                    $images[$objFile->path] = $this->getMetaData($objSubfiles->meta, $objPage->language);
+                    $images[$objFiles->path] = $this->getMetaData($objFiles->meta, $objPage->language);
+                } else {
+                    $objSubfiles = \FilesModel::findByPid($objFiles->uuid);
+                    if ($objSubfiles === null) {
+                        continue;
+                    }
+                    while ($objSubfiles->next()) {
+                        // Skip subfolders
+                        if ($objSubfiles->type == 'folder') {
+                            continue;
+                        }
+                        $objFile = new \File($objSubfiles->path, true);
+
+                        if (!$objFile->isGdImage) {
+                            continue;
+                        }
+                        $images[$objFile->path] = $this->getMetaData($objSubfiles->meta, $objPage->language);
+                    }
                 }
             }
-        }
+        } // END if($objFiles !== null)
         return $images;
     }
 
