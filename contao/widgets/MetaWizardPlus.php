@@ -35,14 +35,9 @@ class MetaWizardPlus extends \MetaWizard
      * @return string
      */
     public function generate() {
-
-        $metafieldsPlus = MetaFieldsHelper::getFields();
+        $helper         = MetafieldsHelper::getInstance();
+        $metafieldsPlus = $helper->getFields($this->activeRecord);
         if ($metafieldsPlus === null) {
-            return parent::generate();
-        }
-
-        $fileExtensions = MetaFieldsHelper::getFileExtensions();
-        if (count($fileExtensions) > 0 && !in_array($this->activeRecord->extension, $fileExtensions)) {
             return parent::generate();
         }
 
