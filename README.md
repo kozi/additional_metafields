@@ -39,7 +39,10 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
 </ul>
 ```
 
-### **image**: Template mit erweiterten Metadaten 
+### **image**: Template mit erweiterten Metadaten
+
+Für die Inhaltselemente **Text** und **Akkordeon** (Einzelelement) funktioniert die Ausgabe der Metadaten ebenfalls.
+
 ```html
 <div ...>
   <figure class="image_container" ...>
