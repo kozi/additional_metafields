@@ -41,7 +41,7 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
 
 ### **image**: Template mit erweiterten Metadaten
 
-Für die Inhaltselemente **Text** und **Akkordeon** (Einzelelement) funktioniert die Ausgabe der Metadaten ebenfalls.
+Für die Inhaltselemente **Text** und **Akkordeon (Einzelelement)** funktioniert die Ausgabe der Metadaten ebenfalls.
 
 ```html
 <div ...>
