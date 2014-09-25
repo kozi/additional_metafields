@@ -69,14 +69,14 @@ class MetafieldsHelper extends \Frontend {
         }
 
         if ($objRow->type === 'gallery') {
-            $objElement->__set('metaData', $this->getMultiMetaData($objRow->multiSRC));
+            $objElement->__set('metadata', $this->getMultiMetaData($objRow->multiSRC));
             $strBuffer = $objElement->generate();
         }
 
         if ($objRow->type === 'image') {
             $objFile = \FilesModel::findByUuid($objRow->singleSRC);
             $objElement->__set('singleSRC', $objFile->uuid);
-            $objElement->__set('metaData', $this->getMetaData($objFile->meta, $objPage->language));
+            $objElement->__set('metadata', $this->getMetaData($objFile->meta, $objPage->language));
 
             $strBuffer = $objElement->generate();
         }
@@ -134,11 +134,11 @@ class MetafieldsHelper extends \Frontend {
         return $images;
     }
 
-    public static function embedData(&$body, $metaData) {
+    public static function embedData(&$body, $metadata) {
         foreach($body as $class => $row) {
             foreach($row as $key => $col) {
-                if (array_key_exists($col->singleSRC, $metaData) && sizeof($metaData[$col->singleSRC]) > 0) {
-                    $body[$class][$key]->metaData = $metaData[$col->singleSRC];
+                if (array_key_exists($col->singleSRC, $metadata) && sizeof($metadata[$col->singleSRC]) > 0) {
+                    $body[$class][$key]->metadata = $metadata[$col->singleSRC];
                 }
             }
         }
