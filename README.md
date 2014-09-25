@@ -4,8 +4,22 @@ Contao3: additional_metafields
 Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder könne einfach über einen Menüpunkt im Backend definiert werden.  
 Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **image** ausgegeben und verwendet werden.
 
-### **gallery**: Template mit erweiterten Metadaten 
+## gallery: 
 
+Entweder man greift wie in dem Template zu sehen auf das Metadaten-Array zu, wobei der Schlüsselwert für die Daten das Attribut *singleSRC* des Bildelementes ist oder man verwendet die Hilfsfunktion **MetafieldsHelper::embedData()** in dem man am Anfang des Templates folgenden Aufruf macht:
+
+```html
+<?php MetafieldsHelper::embedData($this->body, $this->metadata); ?>
+```
+Danach kann man in der Schleife die Metadaten einfach direkt aus der Schleifenvariablen **$col** auslesen:
+```html
+<?php var_dump($col->metadata); ?>
+```
+
+
+
+
+##### Template mit erweiterten Metadaten
 ```html
 <ul>
   <?php foreach ($this->body as $class=>$row): ?>
@@ -39,7 +53,7 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
 </ul>
 ```
 
-### **image**: Template mit erweiterten Metadaten
+## **image**: Template mit erweiterten Metadaten
 
 Für die Inhaltselemente **Text** und **Akkordeon (Einzelelement)** funktioniert die Ausgabe der Metadaten ebenfalls.
 
