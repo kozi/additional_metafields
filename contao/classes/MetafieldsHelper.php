@@ -92,9 +92,8 @@ class MetafieldsHelper extends \Frontend {
     }
 
     private function getMultiMetaData($multiSRC) {
-
-
         global $objPage;
+
         $images   = array();
         $objFiles = \FilesModel::findMultipleByUuids(unserialize($multiSRC));
 
@@ -135,6 +134,10 @@ class MetafieldsHelper extends \Frontend {
     }
 
     public static function embedData(&$body, $metadata) {
+        if (!is_array($metadata)) {
+            return false;
+        }
+
         foreach($body as $class => $row) {
             foreach($row as $key => $col) {
                 if (array_key_exists($col->singleSRC, $metadata) && sizeof($metadata[$col->singleSRC]) > 0) {
@@ -142,7 +145,7 @@ class MetafieldsHelper extends \Frontend {
                 }
             }
         }
-        return $body;
+        return true;
     }
 
     private function loadFields() {
