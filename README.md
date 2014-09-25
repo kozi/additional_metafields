@@ -6,7 +6,7 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
 
 ## Galerie Inhaltselement 
 
-Entweder man greift wie in dem Template zu sehen auf das Metadaten-Array zu, wobei der Schlüsselwert für die Daten das Attribut *singleSRC* des Bildelementes ist oder man verwendet die Hilfsfunktion **MetafieldsHelper::embedData()** in dem man am Anfang des Templates folgenden Aufruf macht:
+Entweder man greift wie in dem Template zu sehen auf das Metadaten-Array zu, wobei der Schlüsselwert für die Daten das Attribut *singleSRC* des Bildelementes ist oder man verwendet die Hilfsfunktion **MetafieldsHelper::embedData()** indem man am Anfang des Templates folgenden Aufruf macht:
 
 ```html
 <?php MetafieldsHelper::embedData($this->body, $this->metadata); ?>
