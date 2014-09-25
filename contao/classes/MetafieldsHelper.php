@@ -13,12 +13,7 @@
  * @filesource
  */
 
-
-/**
- * Run in a custom namespace, so the class can be replaced
- */
 namespace AdditionalMetafields;
-
 
 /**
  * Class MetafieldsHelper
@@ -30,8 +25,12 @@ namespace AdditionalMetafields;
  */
 
 class MetafieldsHelper extends \Frontend {
+
     const TYPE_FOLDER      = '__TYPE_FOLDER__';
+
     private $arrMetafields = null;
+
+
     /**
      * @var MetafieldsHelper
      */
@@ -47,6 +46,7 @@ class MetafieldsHelper extends \Frontend {
         if (static::$instance === null) {
             static::$instance = new static();
         }
+
         return static::$instance;
     }
 
@@ -179,4 +179,6 @@ class MetafieldsHelper extends \Frontend {
         }
         return $this->arrMetafields;
     }
-} 
+}
+
+

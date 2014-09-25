@@ -13,12 +13,7 @@
  * @filesource
  */
 
-
-/**
- * Run in a custom namespace, so the class can be replaced
- */
 namespace AdditionalMetafields;
-
 
 /**
  * Class MetaWizardPlus
@@ -28,8 +23,7 @@ namespace AdditionalMetafields;
  * @author     Martin Kozianka <http://kozianka.de/>
  * @package    additional_metafields
  */
-class MetaWizardPlus extends \MetaWizard
-{
+class MetaWizardPlus extends \MetaWizard {
     /**
      * Generate the widget and return it as string
      * @return string
@@ -37,6 +31,7 @@ class MetaWizardPlus extends \MetaWizard
     public function generate() {
         $helper         = MetafieldsHelper::getInstance();
         $metafieldsPlus = $helper->getFields($this->activeRecord);
+
         if ($metafieldsPlus === null) {
             return parent::generate();
         }
@@ -95,3 +90,5 @@ class MetaWizardPlus extends \MetaWizard
         return $return;
     }
 }
+
+

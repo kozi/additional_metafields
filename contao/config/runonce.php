@@ -64,5 +64,3 @@ class MetafieldsRunonceJob extends \Controller {
 $objMetafieldsRunonceJob = new MetafieldsRunonceJob();
 $objMetafieldsRunonceJob->run();
 
-
-

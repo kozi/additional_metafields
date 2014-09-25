@@ -13,8 +13,6 @@
  * @filesource
  */
 
-
-
 ClassLoader::addNamespace('AdditionalMetafields');
 
 ClassLoader::addClasses(array(
@@ -22,3 +20,5 @@ ClassLoader::addClasses(array(
     'AdditionalMetafields\MetaWizardPlus'            => 'system/modules/additional_metafields/widgets/MetaWizardPlus.php',
     'AdditionalMetafields\MetafieldsModel'           => 'system/modules/additional_metafields/models/MetafieldsModel.php',
 ));
+
+

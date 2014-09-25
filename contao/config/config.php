@@ -33,5 +33,3 @@ if (TL_MODE == 'BE') {
     $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css";
 }
 
-
-
