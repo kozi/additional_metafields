@@ -64,7 +64,7 @@ class MetafieldsHelper extends \Frontend {
     public function injectMetaData($objRow, $strBuffer, $objElement)    {
         global $objPage;
 
-        if (!in_array($objRow->type, array('image', 'gallery'))) {
+        if (!in_array($objRow->type, array('text', 'image', 'gallery', 'accordionSingle'))) {
             return $strBuffer;
         }
 
@@ -73,7 +73,9 @@ class MetafieldsHelper extends \Frontend {
             $strBuffer = $objElement->generate();
         }
 
-        if ($objRow->type === 'image') {
+        if ($objRow->type === 'image'
+            || ($objRow->type === 'text' && $objRow->addImage === '1')
+            || ($objRow->type === 'accordionSingle' && $objRow->addImage === '1')) {
             $objFile = \FilesModel::findByUuid($objRow->singleSRC);
             $objElement->__set('singleSRC', $objFile->uuid);
             $objElement->__set('metadata', $this->getMetaData($objFile->meta, $objPage->language));
