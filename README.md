@@ -1,8 +1,7 @@
 Contao3: additional_metafields
 ====================================
 
-Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder könne einfach über einen Menüpunkt im Backend definiert werden.  
-Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **image** ausgegeben und verwendet werden.
+Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder könne einfach über einen Menüpunkt im Backend definiert werden. Die zusätzlichen Metadaten können dann in den Inhaltselementen **gallery**, **image**, **text** und **accordionSingle** ausgegeben und verwendet werden.
 
 ## Galerie Inhaltselement 
 
