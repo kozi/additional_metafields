@@ -22,10 +22,10 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
               <figcaption class="singleSRC"><?php echo 'singleSRC: '.$col->singleSRC; ?></figcaption>
               
               <div class="metaData">
-                <figcaption class="author"><?php echo $this->metaData[$col->singleSRC][author]; ?></figcaption>
-                <figcaption class="city"><?php echo $this->metaData[$col->singleSRC][city]; ?></figcaption>
-                <figcaption class="quote"><?php echo $this->metaData[$col->singleSRC][quote]; ?></figcaption>
-                <figcaption class="isbn"><?php echo $this->metaData[$col->singleSRC]['isbn']; ?></figcaption>
+                <figcaption class="author"><?php echo $this->metadata[$col->singleSRC][author]; ?></figcaption>
+                <figcaption class="city"><?php echo $this->metadata[$col->singleSRC][city]; ?></figcaption>
+                <figcaption class="quote"><?php echo $this->metadata[$col->singleSRC][quote]; ?></figcaption>
+                <figcaption class="isbn"><?php echo $this->metadata[$col->singleSRC]['isbn']; ?></figcaption>
               </div>
 	      
             <?php if ($col->caption): ?>
@@ -45,7 +45,7 @@ Die zusätzlichen Metadaten können dann in den Elementen **gallery** und **imag
   <figure class="image_container" ...>
     ...
   </figure>
-  <?php var_dump($this->metaData); ?>
+  <?php var_dump($this->metadata); ?>
 </div>
 ```
 
