@@ -8,6 +8,8 @@ Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die
 * Text [*ce_text*]
 * Akkordeon (Einzelelement) [*ce_accordion*]
 
+Zusätzlich dazu werden die Metadaten auch für die Teaserbilder im Nachrichtenmodul in die jeweiligen Templates integriert. Die Nutzung der Metadaten erfolgt analog zum dem Beipspiel des Inhaltelementes Bild.
+
 ## Galerie Inhaltselement 
 
 Entweder man greift wie in dem Template zu sehen auf das Metadaten-Array zu, wobei der Schlüsselwert für die Daten das Attribut *singleSRC* des Bildelementes ist oder man verwendet die Hilfsfunktion **MetafieldsHelper::embedData()** indem man am Anfang des Templates folgenden Aufruf macht:
