@@ -13,12 +13,10 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['getContentElement'][]         = array('AdditionalMetafields\MetafieldsHelper', 'injectMetaData');
-$GLOBALS['TL_HOOKS']['parseArticles'][]             = array('AdditionalMetafields\MetafieldsHelper', 'injectMetaDataArticleImage');
+$GLOBALS['TL_HOOKS']['getContentElement'][]         = array('MetafieldsHelper', 'injectMetaData');
+$GLOBALS['TL_HOOKS']['parseArticles'][]             = array('MetafieldsHelper', 'injectMetaDataArticleImage');
 
-$GLOBALS['BE_FFL']['metaWizardPlus']                = 'AdditionalMetafields\MetaWizardPlus';
-
-$GLOBALS['TL_MODELS']['tl_metafields']              = 'AdditionalMetafields\MetafieldsModel';
+$GLOBALS['BE_FFL']['metaWizardPlus']                = 'MetaWizardPlus';
 
 array_insert($GLOBALS['BE_MOD']['system'], 1, array(
     'metafields' => array
@@ -27,7 +25,6 @@ array_insert($GLOBALS['BE_MOD']['system'], 1, array(
         'icon'       => 'system/modules/additional_metafields/assets/document-stamp.png'
     )
 ));
-
 
 if (TL_MODE == 'BE') {
     $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css";

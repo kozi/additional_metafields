@@ -10,3 +10,4 @@ $GLOBALS['TL_LANG']['tl_metafields']['folder']            = array('Für Ordner a
 $GLOBALS['TL_LANG']['tl_metafields']['new']          = array('Neues Attribut', 'Neues Attribut anlegen');
 $GLOBALS['TL_LANG']['tl_metafields']['edit']         = array('Attribut editieren', 'Attribut editieren');
 $GLOBALS['TL_LANG']['tl_metafields']['delete']       = array('Attribut löschen', 'Attribut löschen');
+

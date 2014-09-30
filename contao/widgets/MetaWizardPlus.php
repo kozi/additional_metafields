@@ -13,8 +13,6 @@
  * @filesource
  */
 
-namespace AdditionalMetafields;
-
 /**
  * Class MetaWizardPlus
  *

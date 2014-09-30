@@ -13,8 +13,6 @@
  * @filesource
  */
 
-use \AdditionalMetafields\MetafieldsModel;
-
 class MetafieldsRunonceJob extends \Controller {
 
     public function __construct() {
