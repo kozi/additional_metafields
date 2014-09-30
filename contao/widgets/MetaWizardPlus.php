@@ -12,6 +12,7 @@
  * @license    LGPL
  * @filesource
  */
+namespace AdditionalMetafields;
 
 /**
  * Class MetaWizardPlus

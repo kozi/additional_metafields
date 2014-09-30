@@ -13,6 +13,9 @@
  * @filesource
  */
 
+
+namespace AdditionalMetafields;
+
 /**
  * Class MetafieldsHelper
  *
@@ -125,11 +128,13 @@ class MetafieldsHelper extends \Frontend {
                         if (!$objFile->isGdImage) {
                             continue;
                         }
+
                         $images[$objFile->path] = $this->getMetaData($objSubfiles->meta, $objPage->language);
                     }
                 }
             }
         } // END if($objFiles !== null)
+
         return $images;
     }
 

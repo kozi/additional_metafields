@@ -12,7 +12,7 @@
  * @license    LGPL
  * @filesource
  */
-
+namespace AdditionalMetafields;
 
 /**
  * Class MetafieldsModel
