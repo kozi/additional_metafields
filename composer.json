@@ -1,5 +1,5 @@
 {
-    "name":"martin-kozianka/additional_metafields",
+    "name":"martin-kozianka/contao-metafields",
     "description":"Additional metafields for contao",
     "keywords":["contao", "metafields"],
     "type":"contao-module",
@@ -14,22 +14,20 @@
     ],
     "support":{
         "email":"martin@kozianka.de",
-        "issues":"https://github.com/kozi/additional_metafields/issues",
+        "issues":"https://github.com/kozi/contao-metafields/issues",
         "irc":"irc://irc.freenode.org/contao.dev",
-        "source":"https://github.com/kozi/additional_metafields"
+        "source":"https://github.com/kozi/contao-metafields"
 
     },
     "require": {
-        "contao-community-alliance/composer-plugin": "~2"
-    },
-    "require-dev": {
+        "contao-community-alliance/composer-plugin": "~2",        
         "php": ">=5.5",
         "contao/core": ">=3.4"
     },
     "extra":{
         "contao": {
             "sources":{
-                "contao": "system/modules/additional_metafields"
+                "contao": "system/modules/metafields"
             }
         }
     }
