@@ -19,9 +19,12 @@
         "source":"https://github.com/kozi/additional_metafields"
 
     },
-    "require":{
-        "php":">=5.3",
-        "contao/core":">=3.2,<4"
+    "require": {
+        "contao-community-alliance/composer-plugin": "~2"
+    },
+    "require-dev": {
+        "php": ">=5.5",
+        "contao/core": ">=3.4"
     },
     "extra":{
         "contao": {
