@@ -15,9 +15,9 @@
 ClassLoader::addNamespace('AdditionalMetafields');
 
 ClassLoader::addClasses(array(
-    'AdditionalMetafields\MetafieldsHelper'          => 'system/modules/additional_metafields/classes/MetafieldsHelper.php',
-    'AdditionalMetafields\MetaWizardPlus'            => 'system/modules/additional_metafields/widgets/MetaWizardPlus.php',
-    'AdditionalMetafields\MetafieldsModel'           => 'system/modules/additional_metafields/models/MetafieldsModel.php',
+    'AdditionalMetafields\MetafieldsHelper'          => 'system/modules/metafields/classes/MetafieldsHelper.php',
+    'AdditionalMetafields\MetaWizardPlus'            => 'system/modules/metafields/widgets/MetaWizardPlus.php',
+    'AdditionalMetafields\MetafieldsModel'           => 'system/modules/metafields/models/MetafieldsModel.php',
 ));
 
 

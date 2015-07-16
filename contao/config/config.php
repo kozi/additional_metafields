@@ -23,11 +23,11 @@ array_insert($GLOBALS['BE_MOD']['system'], 1, array(
     'metafields' => array
     (
         'tables'     => array('tl_metafields'),
-        'icon'       => 'system/modules/additional_metafields/assets/document-stamp.png'
+        'icon'       => 'system/modules/metafields/assets/document-stamp.png'
     )
 ));
 
 if (TL_MODE == 'BE') {
-    $GLOBALS['TL_CSS'][] = "/system/modules/additional_metafields/assets/style.css";
+    $GLOBALS['TL_CSS'][] = "/system/modules/metafields/assets/style.css";
 }
 
