@@ -1,4 +1,4 @@
-Contao3: additional_metafields
+Contao3: contao-metafields
 ====================================
 
 Mit dieser Erweiterung kann man Dateien weitere Metadatenfelder hinzufügen. Die Felder könne einfach über einen Menüpunkt im Backend definiert werden. Die zusätzlichen Metadaten können dann in folgenden Inhaltselementen ausgegeben und verwendet werden:
