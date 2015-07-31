@@ -2,13 +2,13 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2014 Leo Feyer
+ * Copyright (C) 2005-2015 Leo Feyer
  *
  *
  * PHP version 5
- * @copyright  Martin Kozianka 2013-2014 <http://kozianka.de/>
+ * @copyright  Martin Kozianka 2013-2015 <http://kozianka.de/>
  * @author     Martin Kozianka <http://kozianka.de/>
- * @package    additional_metafields
+ * @package    contao-metafields
  * @license    LGPL
  * @filesource
  */
@@ -18,11 +18,12 @@ namespace AdditionalMetafields;
  * Class MetaWizardPlus
  *
  * Extends the MetaWizard class
- * @copyright  Martin Kozianka 2013-2014 <http://kozianka.de/>
+ * @copyright  Martin Kozianka 2013-2015 <http://kozianka.de/>
  * @author     Martin Kozianka <http://kozianka.de/>
- * @package    additional_metafields
+ * @package    contao-metafields
  */
-class MetaWizardPlus extends \MetaWizard {
+class MetaWizardPlus extends \MetaWizard
+{
     /**
      * Generate the widget and return it as string
      * @return string
