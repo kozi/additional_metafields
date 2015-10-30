@@ -25,7 +25,6 @@
 use Contao\MetaWizard;
 use AdditionalMetafields\MetafieldsHelper;
 
-
 class MetaWizardPlus extends MetaWizard
 {
     /**

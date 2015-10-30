@@ -21,6 +21,7 @@
  * @author     Martin Kozianka <http://kozianka.de/>
  * @package    contao-metafields
  */
+
 class MetafieldsModel extends \Model
 {
     protected static $strTable = 'tl_metafields';
