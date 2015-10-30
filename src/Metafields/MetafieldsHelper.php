@@ -1,4 +1,4 @@
-<?php namespace AdditionalMetafields;
+<?php namespace Metafields;
 
 /**
  * Contao Open Source CMS
@@ -21,7 +21,7 @@
  * @author     Martin Kozianka <http://kozianka.de/>
  * @package    contao-metafields
  */
-use AdditionalMetafields\Models\MetafieldsModel;
+use Metafields\Models\MetafieldsModel;
 
 class MetafieldsHelper extends \Frontend
 {

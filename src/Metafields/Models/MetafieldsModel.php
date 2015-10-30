@@ -1,4 +1,4 @@
-<?php namespace AdditionalMetafields\Models;
+<?php namespace Metafields\Models;
 
 /**
  * Contao Open Source CMS

@@ -1,4 +1,4 @@
-<?php namespace AdditionalMetafields\Widgets;
+<?php namespace Metafields\Widgets;
 
     /**
      * Contao Open Source CMS
@@ -23,7 +23,7 @@
  */
 
 use Contao\MetaWizard;
-use AdditionalMetafields\MetafieldsHelper;
+use Metafields\MetafieldsHelper;
 
 class MetaWizardPlus extends MetaWizard
 {
@@ -35,7 +35,7 @@ class MetaWizardPlus extends MetaWizard
     {
         $helper            = MetafieldsHelper::getInstance();
         $arrMetaFieldsPlus = $helper->getFields($this->activeRecord);
-        
+
         if ($arrMetaFieldsPlus !== null)
         {
             $cssStyle  = '';

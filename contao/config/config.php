@@ -13,11 +13,11 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['getContentElement'][] = ['\AdditionalMetafields\MetafieldsHelper', 'injectMetaData'];
-$GLOBALS['TL_HOOKS']['parseArticles'][]     = ['\AdditionalMetafields\MetafieldsHelper', 'injectMetaDataArticleImage'];
+$GLOBALS['TL_HOOKS']['getContentElement'][] = ['\Metafields\MetafieldsHelper', 'injectMetaData'];
+$GLOBALS['TL_HOOKS']['parseArticles'][]     = ['\Metafields\MetafieldsHelper', 'injectMetaDataArticleImage'];
 
-$GLOBALS['BE_FFL']['metaWizardPlus']        = '\AdditionalMetafields\Widgets\MetaWizardPlus';
-$GLOBALS['TL_MODELS']['tl_metafields']      = '\AdditionalMetafields\Models\MetafieldsModel';
+$GLOBALS['BE_FFL']['metaWizardPlus']        = '\Metafields\Widgets\MetaWizardPlus';
+$GLOBALS['TL_MODELS']['tl_metafields']      = '\Metafields\Models\MetafieldsModel';
 
 array_insert($GLOBALS['BE_MOD']['system'], 1, [
     'metafields' => [
