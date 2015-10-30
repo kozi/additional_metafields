@@ -22,8 +22,9 @@
  * @package    contao-metafields
  */
 
-use AdditionalMetafields\MetafieldsHelper;
 use Contao\MetaWizard;
+use AdditionalMetafields\MetafieldsHelper;
+
 
 class MetaWizardPlus extends MetaWizard
 {
