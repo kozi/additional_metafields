@@ -23,8 +23,9 @@
  */
 
 use AdditionalMetafields\MetafieldsHelper;
+use Contao\MetaWizard;
 
-class MetaWizardPlus extends \MetaWizard
+class MetaWizardPlus extends MetaWizard
 {
     /**
      * Generate the widget and return it as string
