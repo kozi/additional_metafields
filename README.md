@@ -15,7 +15,7 @@ Zusätzlich dazu werden die Metadaten auch für die Teaserbilder im Nachrichtenm
 Entweder man greift wie in dem Template zu sehen auf das Metadaten-Array zu, wobei der Schlüsselwert für die Daten das Attribut *singleSRC* des Bildelementes ist oder man verwendet die Hilfsfunktion **MetafieldsHelper::embedData()** indem man am Anfang des Templates folgenden Aufruf macht:
 
 ```html
-<?php MetafieldsHelper::embedData($this->body, $this->metadata); ?>
+<?php Metafields\MetafieldsHelper::embedData($this->body, $this->metadata); ?>
 ```
 Danach kann man in der Schleife die Metadaten einfach direkt aus der Schleifenvariablen **$col** auslesen:
 ```html
