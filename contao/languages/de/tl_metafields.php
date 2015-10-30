@@ -1,6 +1,5 @@
 <?php
 
-
 $GLOBALS['TL_LANG']['tl_metafields']['metafields_legend'] = 'Metafield-Attribut';
 $GLOBALS['TL_LANG']['tl_metafields']['alias']             = ['Alias', 'Mit dem Alias kann im Template auf das Attribut zugegriffen werden.'];
 $GLOBALS['TL_LANG']['tl_metafields']['label']             = ['Label', 'Label des Attributes'];

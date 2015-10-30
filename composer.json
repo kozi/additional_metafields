@@ -24,6 +24,11 @@
         "php": ">=5.5",
         "contao/core": ">=3.4"
     },
+    "autoload": {
+        "psr-0": {
+            "AdditionalMetafields": "src/"
+        }
+    },
     "extra":{
         "contao": {
             "sources":{

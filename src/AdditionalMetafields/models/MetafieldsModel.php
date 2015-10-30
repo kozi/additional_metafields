@@ -1,4 +1,4 @@
-<?php
+<?php namespace AdditionalMetafields\Models;
 
 /**
  * Contao Open Source CMS
@@ -12,7 +12,6 @@
  * @license    LGPL
  * @filesource
  */
-namespace AdditionalMetafields;
 
 /**
  * Class MetafieldsModel

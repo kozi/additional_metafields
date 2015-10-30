@@ -13,29 +13,35 @@
  * @filesource
  */
 
-class MetafieldsRunonceJob extends \Controller {
-
-    public function __construct() {
+class MetafieldsRunonceJob extends \Controller
+{
+    public function __construct()
+    {
         parent::__construct();
         $this->import('Database');
     }
 
-    public function run() {
+    public function run()
+    {
         require_once(TL_ROOT.'/system/config/langconfig.php');
 
-        if ($this->Database->tableExists('tl_metafields')) {
+        if ($this->Database->tableExists('tl_metafields'))
+        {
             return false;
         }
 
-        if (!is_array($GLOBALS['TL_LANG']['additional_metafields'])) {
+        if (!is_array($GLOBALS['TL_LANG']['additional_metafields']))
+        {
             return false;
         }
 
-        if (!array_key_exists('additional_metafields_exts', $GLOBALS['TL_CONFIG'])) {
+        if (!array_key_exists('additional_metafields_exts', $GLOBALS['TL_CONFIG']))
+        {
             return false;
         }
 
-        if (strlen($GLOBALS['TL_CONFIG']['additional_metafields_exts']) === 0) {
+        if (strlen($GLOBALS['TL_CONFIG']['additional_metafields_exts']) === 0)
+        {
             return false;
         }
 
@@ -48,7 +54,8 @@ class MetafieldsRunonceJob extends \Controller {
             .$arrSql["TABLE_OPTIONS"].';';
         $this->Database->execute($strSql);
 
-        foreach($GLOBALS['TL_LANG']['additional_metafields'] as $alias => $label) {
+        foreach($GLOBALS['TL_LANG']['additional_metafields'] as $alias => $label)
+        {
             $objModel = new MetafieldsModel();
             $objModel->tstamp     = time();
             $objModel->alias      = $alias;
@@ -56,6 +63,7 @@ class MetafieldsRunonceJob extends \Controller {
             $objModel->extensions = $exts;
             $objModel->save();
         }
+
     }
 }
 

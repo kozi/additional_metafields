@@ -1,4 +1,4 @@
-<?php
+<?php namespace AdditionalMetafields;
 
 /**
  * Contao Open Source CMS
@@ -13,9 +13,6 @@
  * @filesource
  */
 
-
-namespace AdditionalMetafields;
-
 /**
  * Class MetafieldsHelper
  *
@@ -24,6 +21,7 @@ namespace AdditionalMetafields;
  * @author     Martin Kozianka <http://kozianka.de/>
  * @package    contao-metafields
  */
+use AdditionalMetafields\Models\MetafieldsModel;
 
 class MetafieldsHelper extends \Frontend
 {
@@ -58,7 +56,7 @@ class MetafieldsHelper extends \Frontend
         $arrMetafields = $this->loadFields();
         $strType       = ($activeRecord->type !== 'folder') ? $activeRecord->extension : self::TYPE_FOLDER;
 
-        if (!array_key_exists($strType, $arrMetafields) )
+        if (!array_key_exists($strType, $arrMetafields))
         {
             return null;
         }
@@ -110,8 +108,10 @@ class MetafieldsHelper extends \Frontend
         $images   = array();
         $objFiles = \FilesModel::findMultipleByUuids(unserialize($multiSRC));
 
-        if($objFiles !== null) {
-            while ($objFiles->next()) {
+        if($objFiles !== null)
+        {
+            while ($objFiles->next())
+            {
                 // Continue if the files has been processed or does not exist
                 if (isset($images[$objFiles->path]) || !file_exists(TL_ROOT . '/' . $objFiles->path))
                 {
@@ -183,7 +183,7 @@ class MetafieldsHelper extends \Frontend
         {
             return $this->arrMetafields;
         }
-        $this->arrMetafields = array();
+        $this->arrMetafields = [];
         // Todo label translation
         $collection = MetafieldsModel::findAll();
 
@@ -203,7 +203,7 @@ class MetafieldsHelper extends \Frontend
             {
                 if (!is_array($this->arrMetafields[$ext]))
                 {
-                    $this->arrMetafields[$ext] = array();
+                    $this->arrMetafields[$ext] = [];
                 }
                 $this->arrMetafields[$ext][$alias] = $label;
 
@@ -211,7 +211,7 @@ class MetafieldsHelper extends \Frontend
                 {
                     if (!is_array($this->arrMetafields[static::TYPE_FOLDER]))
                     {
-                        $this->arrMetafields[static::TYPE_FOLDER] = array();
+                        $this->arrMetafields[static::TYPE_FOLDER] = [];
                     }
                     $this->arrMetafields[static::TYPE_FOLDER][$alias] = $label;
                 }
