@@ -26,8 +26,9 @@ array_insert($GLOBALS['BE_MOD']['system'], 1, [
     ]
 ]);
 
+/*
 if (TL_MODE === 'BE')
 {
-    $GLOBALS['TL_CSS'][] = "/system/modules/metafields/assets/style.css";
+    $GLOBALS['TL_CSS'][] = "/system/modules/metafields/assets/style.css||static";
 }
-
+*/
