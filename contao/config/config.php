@@ -25,10 +25,3 @@ array_insert($GLOBALS['BE_MOD']['system'], 1, [
         'icon'       => 'system/modules/metafields/assets/document-stamp.png'
     ]
 ]);
-
-/*
-if (TL_MODE === 'BE')
-{
-    $GLOBALS['TL_CSS'][] = "/system/modules/metafields/assets/style.css||static";
-}
-*/
