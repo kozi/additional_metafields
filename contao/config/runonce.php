@@ -23,7 +23,11 @@ class MetafieldsRunonceJob extends \Controller
 
     public function run()
     {
-        require_once(TL_ROOT.'/system/config/langconfig.php');
+        $langConfigFile = TL_ROOT.'/system/config/langconfig.php';
+        if (file_exists($langConfigFile))
+        {
+            require_once($langConfigFile);
+        }
 
         if ($this->Database->tableExists('tl_metafields'))
         {
