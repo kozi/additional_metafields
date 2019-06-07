@@ -159,7 +159,7 @@ class MetafieldsHelper extends \Frontend
 
     public static function embedData(&$body, $metadata)
     {
-        if (!is_array($metadata))
+        if (!is_array($metadata) || null === $body)
         {
             return false;
         }
